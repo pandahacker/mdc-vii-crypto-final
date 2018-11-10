@@ -8,7 +8,8 @@ import { Single } from "./views/single.jsx";
 import Store from "./store/appContext.jsx";
 
 import { Navbar } from "./component/navbar.jsx";
-import { Footer } from "./component/footer.jsx";
+import { Footerpage } from "./component/footer.jsx";
+import { Col, Container, Row, Footer } from "mdbreact";
 
 //create your first component
 export class Layout extends React.Component {
@@ -23,7 +24,7 @@ export class Layout extends React.Component {
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
-					<Footer />
+					<Footerpage />
 				</ScrollToTop>
 			</BrowserRouter>
 		);
