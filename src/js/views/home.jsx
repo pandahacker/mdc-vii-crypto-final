@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-//include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
+import "../../styles/home.css";
 
-//create your first component
 export class Home extends React.Component {
 	render() {
 		return (
@@ -13,8 +13,14 @@ export class Home extends React.Component {
 					<img src={rigoImage} />
 				</p>
 				<a href="#" className="btn btn-success">
-					If you see this green button... bootstrap is working
+					If you see this green button, bootstrap is working
 				</a>
+				<hr />
+				<Link to="/demo">
+					<button className="btn btn-primary">
+						Check the Context in action
+					</button>
+				</Link>
 				<p>
 					Made by{" "}
 					<a href="http://www.4geeksacademy.com">4Geeks Academy</a>,

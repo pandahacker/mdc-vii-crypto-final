@@ -1,16 +1,15 @@
-# Hello World with React and Cloud 9
+# WebApp boilerplate with React and Cloud 9
 
-Requierents: Make sure you have node version 8
+Requirements: Make sure you are using node version 8
+* `$ node -v` to check which node version you are using
+* `$ nvm use 8` to switch to using version 8
+* `$ nvm install 8` to install version 8 if necessary
 
-##### Download the boilerplate using the BreatheCode CLI
+##### Clone this boilerplate
 ```
-$ npm i breathecode-cli -g
+$ git clone https://github.com/4GeeksAcademy/react-hello-webapp
 ```
 
-##### Download the boilerplate using the BreatheCode CLI
-```
-$ bc start:react-project -r
-```
 ##### and install the npm package:
 ```
 $ npm install
@@ -22,8 +21,21 @@ Start the webpack server with live reload:
 - `$ npm run c9` for Cloud 9 Users.
 - `$ npm run dev-server` for windows, mac or linux.
 
+### Styles
 You can update the `styles/index.scss` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
+
+### Components
+Add more files into your `./src/js/components` or styles folder as you need them.
+
+### Views (Components)
+Add more files into your `./src/js/views` and import them in `./src/js/layout.jsx`.
+
+### Context
+This boilerplate comes with a centralized general Context API. The file `./src/js/store/store.js` has a base structure for the store, we encourage you to change it and adapt it to your needs.
+
+React Context [docs](https://reactjs.org/docs/context.html)
+
+The `Context.Provider` is already set, you can use the `Context.Consumer` to get the `store` and `actions` from the Context. Check `/views/demo.jsx` to see a demo.
 
 ## Publish your website! 
 
