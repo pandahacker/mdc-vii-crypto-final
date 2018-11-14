@@ -6,6 +6,7 @@ import { Home } from "./views/home.jsx";
 import { Demo } from "./views/demo.jsx";
 import { AboutUs } from "./views/aboutus.jsx";
 import { Contact } from "./views/contact.jsx";
+import { Pricing } from "./views/pricing.jsx";
 import { Single } from "./views/single.jsx";
 import Store from "./store/appContext.jsx";
 
@@ -25,6 +26,7 @@ export class Layout extends React.Component {
 						<Route path="/demo" component={Demo} />
 						<Route path="/aboutus" component={AboutUs} />
 						<Route path="/contact" component={Contact} />
+						<Route path="/pricing" component={Pricing} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
