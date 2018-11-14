@@ -6,7 +6,7 @@ export class Contact extends React.Component {
 		return (
 			<Container className="m-5 mx-auto py-3">
 				<Row>
-					<Col md="8">
+					<Col md="6" lg="12">
 						<form className="pr-5">
 							<p className="h2 text-left mb-4">Contact Us</p>
 							<div className="grey-text">
@@ -52,7 +52,6 @@ export class Contact extends React.Component {
 							</div>
 						</form>
 					</Col>
-					<Col md="8" />
 				</Row>
 			</Container>
 		);

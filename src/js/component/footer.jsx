@@ -13,7 +13,7 @@ export class Footerpage extends React.Component {
 								<strong>Company name</strong>
 							</h6>
 							<hr
-								className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+								className="primary-color accent-2 mb-4 mt-0 d-inline-block mx-auto"
 								style={{ width: "60px" }}
 							/>
 							<p>
@@ -27,7 +27,7 @@ export class Footerpage extends React.Component {
 								<strong>Products</strong>
 							</h6>
 							<hr
-								className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+								className="primary-color accent-2 mb-4 mt-0 d-inline-block mx-auto"
 								style={{ width: "60px" }}
 							/>
 							<p>
@@ -48,7 +48,7 @@ export class Footerpage extends React.Component {
 								<strong>Useful links</strong>
 							</h6>
 							<hr
-								className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+								className="primary-color accent-2 mb-4 mt-0 d-inline-block mx-auto"
 								style={{ width: "60px" }}
 							/>
 							<p>
@@ -69,7 +69,7 @@ export class Footerpage extends React.Component {
 								<strong>Contact</strong>
 							</h6>
 							<hr
-								className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+								className="primary-color accent-2 mb-4 mt-0 d-inline-block mx-auto"
 								style={{ width: "60px" }}
 							/>
 							<p>
