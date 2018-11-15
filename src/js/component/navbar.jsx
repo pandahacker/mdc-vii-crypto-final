@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { ModalPage } from "./modalpage.jsx";
 import {
 	Navbar,
 	NavbarBrand,
@@ -16,6 +17,12 @@ export class NavbarPage extends React.Component {
 	};
 
 	toggleCollapse = this.setState({ isOpen: !this.state.isOpen });
+
+	_onButtonClick() {
+		this.setState({
+			showComponent: true
+		});
+	}
 	render() {
 		return (
 			<Navbar color="elegant-color-dark" dark expand="md">
@@ -58,7 +65,15 @@ export class NavbarPage extends React.Component {
 							</FormInline>
 						</NavItem>
 					</NavbarNav>
-					<i className="fas fa-user p-3" />
+					<div>
+						<i
+							onClick={this._onButtonClick}
+							className="fas fa-user p-3"
+						/>
+						{this.state.showComponent ? (
+							<ModalPage isOpen={true} />
+						) : null}
+					</div>
 				</Collapse>
 			</Navbar>
 		);
