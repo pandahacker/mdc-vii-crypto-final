@@ -1,12 +1,19 @@
 const getState = scope => {
 	return {
 		store: {
-			auth_token: "key"
+			auth_token: "key",
+			username: "username",
+			password: "password"
 		},
 		actions: {
-			changeColor: (element, color) => {
+			getUserName: name => {
 				let store = scope.state.store;
-				store.demo[element].background = color;
+				store.username = name;
+				scope.setState({ store });
+			},
+			getPassword: name => {
+				let store = scope.state.store;
+				store.password = name;
 				scope.setState({ store });
 			},
 			login: (username, password) => {
@@ -19,7 +26,7 @@ const getState = scope => {
 						},
 						body: JSON.stringify({
 							username: "pandahacker",
-							password: "b7328257!"
+							password: ""
 						})
 					}
 				)
