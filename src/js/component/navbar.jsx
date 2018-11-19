@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import ModalPage from "./modalpage.jsx";
 import {
 	Navbar,
 	NavbarBrand,
@@ -7,15 +8,23 @@ import {
 	NavItem,
 	NavbarToggler,
 	Collapse,
-	FormInline
+	FormInline,
+	NavLink
 } from "mdbreact";
 
 export class NavbarPage extends React.Component {
-	state = {
-		isOpen: false
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			isOpen: false
+		};
 
-	toggleCollapse = this.setState({ isOpen: !this.state.isOpen });
+		this.toggleCollapse = this.toggleCollapse.bind(this);
+	}
+
+	toggleCollapse = () => {
+		this.setState({ isOpen: !this.state.isOpen });
+	};
 	render() {
 		return (
 			<Navbar color="elegant-color-dark" dark expand="md">
@@ -47,7 +56,7 @@ export class NavbarPage extends React.Component {
 					<NavbarNav right>
 						<NavItem>
 							<FormInline waves>
-								<div className="md-form my-0">
+								<div className="md-form my-0 pt-2">
 									<input
 										className="form-control mr-sm-2"
 										type="text"
@@ -57,8 +66,10 @@ export class NavbarPage extends React.Component {
 								</div>
 							</FormInline>
 						</NavItem>
+						<NavItem>
+							<ModalPage />
+						</NavItem>
 					</NavbarNav>
-					<i className="fas fa-user p-3" />
 				</Collapse>
 			</Navbar>
 		);

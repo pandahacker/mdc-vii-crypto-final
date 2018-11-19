@@ -14,10 +14,10 @@ import {
 export class AboutUs extends React.Component {
 	render() {
 		return (
-			<Container className="m-5 mx-auto py-3">
+			<Container className="m-3 mx-auto py-3">
 				<Row>
-					<Col>
-						<Card>
+					<Col sm="12" lg="4">
+						<Card className="my-4">
 							<CardImage
 								className="img-fluid"
 								src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
@@ -42,8 +42,8 @@ export class AboutUs extends React.Component {
 							</CardBody>
 						</Card>
 					</Col>
-					<Col>
-						<Card>
+					<Col sm="12" lg="4">
+						<Card className="my-4">
 							<CardImage
 								className="img-fluid"
 								src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
@@ -68,8 +68,8 @@ export class AboutUs extends React.Component {
 							</CardBody>
 						</Card>
 					</Col>
-					<Col>
-						<Card>
+					<Col sm="12" lg="4">
+						<Card className="my-4">
 							<CardImage
 								className="img-fluid"
 								src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
