@@ -6,17 +6,7 @@ const getState = scope => {
 			password: "password"
 		},
 		actions: {
-			getUserName: name => {
-				let store = scope.state.store;
-				store.username = name;
-				scope.setState({ store });
-			},
-			getPassword: name => {
-				let store = scope.state.store;
-				store.password = name;
-				scope.setState({ store });
-			},
-			login: (username, password) => {
+			login: (userName, passWord) => {
 				fetch(
 					"https://wordpress-backend-pandahacker.c9users.io/wp-json/jwt-auth/v1/token",
 					{
@@ -25,18 +15,33 @@ const getState = scope => {
 							"Content-Type": "application/json"
 						},
 						body: JSON.stringify({
-							username: "pandahacker",
-							password: ""
+							username: userName,
+							password: passWord
 						})
 					}
 				)
 					.then(res => res.json())
 					.then(data => {
-						var store = this.state.store;
+						var store = scope.state.store;
 						store.auth_token = data.token;
-						this.setState({
+						scope.setState({
 							store
 						});
+					})
+					.catch(err => {
+						console.log(err);
+					});
+			},
+			validate: () => {
+				fetch("/user/data", {
+					method: "GET",
+					headers: {
+						Authorization: "Bearer" + scope.state.store.auth_token
+					}
+				})
+					.then(res => res.json())
+					.then(data => {
+						console.log(data);
 					})
 					.catch(err => {
 						console.log(err);

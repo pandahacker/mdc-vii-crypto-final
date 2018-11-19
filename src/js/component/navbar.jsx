@@ -56,7 +56,7 @@ export class NavbarPage extends React.Component {
 					<NavbarNav right>
 						<NavItem>
 							<FormInline waves>
-								<div className="md-form my-0">
+								<div className="md-form my-0 pt-2">
 									<input
 										className="form-control mr-sm-2"
 										type="text"
@@ -66,8 +66,10 @@ export class NavbarPage extends React.Component {
 								</div>
 							</FormInline>
 						</NavItem>
+						<NavItem>
+							<ModalPage />
+						</NavItem>
 					</NavbarNav>
-					<ModalPage />
 				</Collapse>
 			</Navbar>
 		);

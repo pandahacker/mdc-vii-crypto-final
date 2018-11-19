@@ -16,11 +16,13 @@ export default class ModalPage extends React.Component {
 		super(props);
 		this.state = {
 			modal: false,
-			userName: "",
+			username: "",
 			password: ""
 		};
 
 		this.toggle = this.toggle.bind(this);
+		this.getUserName = this.getUserName.bind(this);
+		this.getPassword = this.getPassword.bind(this);
 	}
 
 	toggle = () => {
@@ -29,14 +31,14 @@ export default class ModalPage extends React.Component {
 		});
 	};
 
-	getUserName = value => {
+	getUserName = event => {
 		this.setState({
-			userName: value
+			username: event.target.value
 		});
 	};
-	getPassword = value => {
+	getPassword = event => {
 		this.setState({
-			password: value
+			password: event.target.value
 		});
 	};
 
@@ -60,12 +62,16 @@ export default class ModalPage extends React.Component {
 								</ModalHeader>
 								<ModalBody>
 									<Input
-										getValue={this.getUserName}
+										type="text"
 										label="Username"
+										value={this.state.username}
+										onChange={this.getUserName}
 									/>
 									<Input
-										getValue={this.getPassword}
+										type="password"
 										label="Password"
+										value={this.state.password}
+										onChange={this.getPassword}
 									/>
 								</ModalBody>
 								<ModalFooter>
@@ -79,9 +85,10 @@ export default class ModalPage extends React.Component {
 										onClick={event => {
 											event.preventDefault();
 											actions.login(
-												this.state.userName,
+												this.state.username,
 												this.state.password
 											);
+											this.toggle();
 										}}>
 										Login
 									</Button>
