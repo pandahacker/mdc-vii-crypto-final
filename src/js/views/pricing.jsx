@@ -15,25 +15,24 @@ export class Pricing extends React.Component {
 	render() {
 		return (
 			<Container>
-				<div align="right">
+				<div align="center">
 					<div clasNames="card">
-						<h5 className="card-header">
-							<center>30 day trial</center>
-						</h5>
+						<h1 className="card-header">
+							<center>30 day trial </center>
+						</h1>
 						<div className="card-body">
-							<div align="left">
-								<CardImage src="https://via.placeholder.com/150" />
-							</div>
-							<h5 className="card-title">
-								<div align="right">20 USD per month</div>
-							</h5>
-							<p className="card-text">
+							<h2 className="card-title">
+								<div align="center">20 USD per month</div>
+							</h2>
+							<div className="card-text">
 								<ul>
 									<p>Access to membership features</p>
-									<p>Greeting: &quot;Hello, World!&quot;</p>
-									<p>Greeting: &quot;Hello, World!&quot;</p>
+									<p>
+										{" "}
+										<CardImage src="https://s2.coinmarketcap.com/static/img/coins/128x128/2.png" />
+									</p>
 								</ul>
-							</p>
+							</div>
 							<a href="#" className="btn btn-primary">
 								Order
 							</a>
@@ -41,28 +40,28 @@ export class Pricing extends React.Component {
 					</div>
 				</div>
 
-				<div align="right">
+				<div align="center">
 					<div clasNames="card">
-						<h5 className="card-header">
+						<h1 className="card-header">
 							<center>Personal</center>
-						</h5>
-						<div className="card-body">
-							<div align="left">
-								{" "}
-								<CardImage src="https://via.placeholder.com/150" />{" "}
-							</div>
-							<h5 className="card-title">40 USD per month</h5>
-							<p className="card-text">
-								<ul>
-									<p>Access to membership features</p>
-									<p>Greeting: &quot;Hello, World!&quot;</p>
-									<p>Greeting: &quot;Hello, World!&quot;</p>
-								</ul>
-							</p>
-							<a href="#" className="btn btn-primary">
-								Order
-							</a>
+						</h1>
+
+						<h2 className="card-title">
+							<div align="center">40 USD per month</div>
+						</h2>
+						<div className="card-text">
+							<ul>
+								<p>Access to membership features</p>
+								<p>
+									{" "}
+									<CardImage src="https://www.coinbase.com/assets/assets/1-8022fd53c251f18cb39cefede445f1c78a3b265989232f0bb46b9c4622e55a9e.png" />
+								</p>
+							</ul>
 						</div>
+
+						<a href="#" className="btn btn-primary">
+							Order
+						</a>
 					</div>
 				</div>
 			</Container>
