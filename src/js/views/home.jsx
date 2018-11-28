@@ -7,6 +7,40 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export class Home extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			crytoValues: ""
+		};
+		this.getCryptoValues = this.getCryptoValues.bind(this);
+	}
+
+	getCryptoValues = () => {
+		fetch(
+			"https://wordpress-backend-pandahacker.c9users.io/wp-json/acf/v3/btc",
+			{
+				method: "GET"
+			}
+		)
+			.then(res => res.json())
+			.then(data => {
+				var state = this.state;
+				state.cryptoValues = data;
+				this.setState({
+					state
+				});
+			})
+			.catch(err => {
+				console.log(err);
+			});
+
+		console.log(this.state);
+	};
+
+	componentDidMount() {
+		window.addEventListener("load", this.getCryptoValues);
+	}
+
 	render() {
 		return (
 			<Context.Consumer>

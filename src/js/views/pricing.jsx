@@ -19,7 +19,7 @@ export class Pricing extends React.Component {
 					<Col size="6">
 						<Card className="my-5">
 							<CardBody>
-								<CardTitle>Free Tier</CardTitle>
+								<CardTitle className="">Free Tier</CardTitle>
 								<hr />
 								<h1 className="text-center m-5">
 									&#36;0
@@ -62,12 +62,38 @@ export class Pricing extends React.Component {
 										</li>
 										<li>View full historical data</li>
 									</ul>
-									<Button
-										color="primary"
-										className="float-right mt-2"
-										href="#">
-										Register
-									</Button>
+									<div>
+										<form
+											action="https://www.paypal.com/cgi-bin/webscr"
+											method="post"
+											target="_top">
+											<input
+												type="hidden"
+												name="cmd"
+												value="_s-xclick"
+											/>
+											<input
+												type="hidden"
+												name="hosted_button_id"
+												value="RAYVJRVQUPYUW"
+											/>
+											<input
+												type="submit"
+												className="btn btn-primary float-right mt-2"
+												border="0"
+												name="submit"
+												alt="PayPal - The safer, easier way to pay online!"
+												value="Subscribe"
+											/>
+											<img
+												alt=""
+												border="0"
+												src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+												width="1"
+												height="1"
+											/>
+										</form>
+									</div>
 								</CardText>
 							</CardBody>
 						</Card>
