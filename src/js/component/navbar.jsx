@@ -40,7 +40,7 @@ export class NavbarPage extends React.Component {
 					isOpen={this.state.isOpen}
 					navbar>
 					<NavbarNav left>
-						<NavItem active>
+						<NavItem>
 							<NavLink to="/">Home</NavLink>
 						</NavItem>
 						<NavItem>
