@@ -3,7 +3,8 @@ const getState = scope => {
 		store: {
 			auth_token: "key",
 			username: "username",
-			password: "password"
+			password: "password",
+			cryptoValues: {}
 		},
 		actions: {
 			login: (userName, passWord) => {

@@ -10,6 +10,7 @@ import {
 	CardText,
 	Col
 } from "mdbreact";
+import { PaypalButton } from "../component/PaypalButton.jsx";
 
 export class Pricing extends React.Component {
 	render() {
@@ -62,37 +63,8 @@ export class Pricing extends React.Component {
 										</li>
 										<li>View full historical data</li>
 									</ul>
-									<div>
-										<form
-											action="https://www.paypal.com/cgi-bin/webscr"
-											method="post"
-											target="_top">
-											<input
-												type="hidden"
-												name="cmd"
-												value="_s-xclick"
-											/>
-											<input
-												type="hidden"
-												name="hosted_button_id"
-												value="RAYVJRVQUPYUW"
-											/>
-											<input
-												type="submit"
-												className="btn btn-primary float-right mt-2"
-												border="0"
-												name="submit"
-												alt="PayPal - The safer, easier way to pay online!"
-												value="Subscribe"
-											/>
-											<img
-												alt=""
-												border="0"
-												src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
-												width="1"
-												height="1"
-											/>
-										</form>
+									<div className="float-right mt-2">
+										<PaypalButton />
 									</div>
 								</CardText>
 							</CardBody>

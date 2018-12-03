@@ -1,45 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
-import { Table, TableBody, TableHead } from "mdbreact";
+import { CryptoTable } from "../component/CryptoTable.jsx";
 
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export class Home extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			crytoValues: ""
-		};
-		this.getCryptoValues = this.getCryptoValues.bind(this);
-	}
+	// constructor(props) {
+	// 	super(props);
+	// 	this.state = {
+	// 		cryptoValues: {}
+	// 	};
+	// 	this.getCryptoValues = this.getCryptoValues.bind(this);
+	// }
 
-	getCryptoValues = () => {
-		fetch(
-			"https://wordpress-backend-pandahacker.c9users.io/wp-json/acf/v3/btc",
-			{
-				method: "GET"
-			}
-		)
-			.then(res => res.json())
-			.then(data => {
-				var state = this.state;
-				state.cryptoValues = data;
-				this.setState({
-					state
-				});
-			})
-			.catch(err => {
-				console.log(err);
-			});
+	// getCryptoValues = () => {
+	// 	fetch(
+	// 		"https://wordpress-backend-pandahacker.c9users.io/wp-json/sample_api/v1/coin",
+	// 		{
+	// 			method: "GET"
+	// 		}
+	// 	)
+	// 		.then(res => res.json())
+	// 		.then(data => {
+	// 			var values = this.state.cryptoValues;
+	// 			values = data;
+	// 			this.setState({
+	// 				cryptoValues: values
+	// 			});
+	// 			console.log(values);
+	// 		})
+	// 		.catch(err => {
+	// 			console.log(err);
+	// 		});
+	// };
 
-		console.log(this.state);
-	};
-
-	componentDidMount() {
-		window.addEventListener("load", this.getCryptoValues);
-	}
+	// componentDidMount() {
+	// 	window.addEventListener("load", this.getCryptoValues);
+	// }
 
 	render() {
 		return (
@@ -68,36 +67,7 @@ export class Home extends React.Component {
 								</a>
 								, with love!
 							</p>
-							<Table>
-								<TableHead color="primary-color" textWhite>
-									<tr>
-										<th>#</th>
-										<th>First</th>
-										<th>Last</th>
-										<th>Handle</th>
-									</tr>
-								</TableHead>
-								<TableBody>
-									<tr>
-										<td>1</td>
-										<td>Mark</td>
-										<td>Otto</td>
-										<td>@mdo</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>Jacob</td>
-										<td>Thornton</td>
-										<td>@fat</td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>Larry</td>
-										<td>the Bird</td>
-										<td>@twitter</td>
-									</tr>
-								</TableBody>
-							</Table>
+							<CryptoTable map={store.cryptoValues} />
 						</div>
 					);
 				}}
