@@ -29,10 +29,12 @@ export class NavbarPage extends React.Component {
 		return (
 			<Navbar color="elegant-color-dark" dark expand="md">
 				<NavbarBrand>
-					<a className="fas fa-coins d-inline-block" />
-					<strong className="white-text ml-2">
-						Crypto-Placeholder
-					</strong>
+					<NavLink to="/">
+						<a className="fas fa-coins d-inline-block text-white" />
+						<strong className="white-text ml-2">
+							Crypto-Placeholder
+						</strong>
+					</NavLink>
 				</NavbarBrand>
 				<NavbarToggler onClick={this.toggleCollapse} />
 				<Collapse
@@ -41,9 +43,6 @@ export class NavbarPage extends React.Component {
 					navbar>
 					<NavbarNav left>
 						<NavItem>
-							<NavLink to="/">Home</NavLink>
-						</NavItem>
-						<NavItem>
 							<NavLink to="/pricing">Pricing</NavLink>
 						</NavItem>
 						<NavItem>
@@ -51,6 +50,9 @@ export class NavbarPage extends React.Component {
 						</NavItem>
 						<NavItem>
 							<NavLink to="/contact">Contact</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink to="/register">Register</NavLink>
 						</NavItem>
 					</NavbarNav>
 					<NavbarNav right>

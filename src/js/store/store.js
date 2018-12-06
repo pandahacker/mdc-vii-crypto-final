@@ -4,7 +4,7 @@ const getState = scope => {
 			auth_token: "key",
 			username: "username",
 			password: "password",
-			cryptoValues: {}
+			cryptoValues: []
 		},
 		actions: {
 			login: (userName, passWord) => {
@@ -46,6 +46,30 @@ const getState = scope => {
 					})
 					.catch(err => {
 						console.log(err);
+					});
+			},
+			createUser: (userName, userEmail, passWord) => {
+				fetch(
+					"https://wordpress-backend-pandahacker.c9users.io/wp-json/wp/v2/users/register",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json"
+						},
+						body: JSON.stringify({
+							username: userName,
+							email: userEmail,
+							password: passWord
+						})
+					}
+				)
+					.then(res => res.json())
+					.then(data => {
+						console.log(data);
+					})
+					.catch(err => {
+						console.log(err);
+						console.log(userName + userEmail + passWord);
 					});
 			}
 		}

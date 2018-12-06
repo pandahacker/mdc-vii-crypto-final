@@ -2,43 +2,26 @@ import React from "react";
 import { Table, TableBody, TableHead } from "mdbreact";
 import PropTypes from "prop-types";
 
-export class CryptoTable extends React.Component {
-	render() {
-		return (
-			<Table>
-				<TableHead color="primary-color" textWhite>
-					<tr>
-						<th>{this.prop.map}</th>
-						<th>First</th>
-						<th>Last</th>
-						<th>Handle</th>
-					</tr>
-				</TableHead>
-				<TableBody>
-					<tr>
-						<td>1</td>
-						<td>Mark</td>
-						<td>Otto</td>
-						<td>@mdo</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Jacob</td>
-						<td>Thornton</td>
-						<td>@fat</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>Larry</td>
-						<td>the Bird</td>
-						<td>@twitter</td>
-					</tr>
-				</TableBody>
-			</Table>
-		);
-	}
-}
+const CryptoTable = props => {
+	console.log(props.values.length);
+	var tableRows = props.values.map((coin, index) => {
+		var price = parseFloat(coin.meta_keys.PRICE).toFixed(2);
+		var highDay = parseFloat(coin.meta_keys.HIGHDAY).toFixed(2);
+		var lowDay = parseFloat(coin.meta_keys.LOWDAY).toFixed(2);
 
-CryptoTable.propTypes = {
-	map: PropTypes.arrayOf(PropTypes.object)
+		if (props.values.length != 0) {
+			return (
+				<tr key={index}>
+					<td>{coin.meta_keys.FROMSYMBOL}</td>
+					<td>${price}</td>
+					<td>${highDay}</td>
+					<td>${lowDay}</td>
+				</tr>
+			);
+		}
+	});
+
+	return tableRows;
 };
+
+export default CryptoTable;

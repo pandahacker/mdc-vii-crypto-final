@@ -8,7 +8,16 @@ import {
 	ModalHeader,
 	ModalFooter,
 	InputFile,
-	Input
+	Input,
+	MDBContainer,
+	MDBRow,
+	MDBCol,
+	MDBTabPane,
+	MDBTabContent,
+	MDBNav,
+	MDBNavItem,
+	MDBNavLink,
+	MDBIcon
 } from "mdbreact";
 
 export default class ModalPage extends React.Component {
