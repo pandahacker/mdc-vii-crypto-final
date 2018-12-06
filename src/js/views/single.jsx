@@ -13,8 +13,9 @@ export class Single extends React.Component {
 							<h1 className="display-4">
 								This will show the demo element:{" "}
 								{
-									store.demo[this.props.match.params.theid]
-										.title
+									store.cryptoValues[
+										this.props.match.params.theid
+									].meta_keys.FROMSYMBOL
 								}
 							</h1>
 						);

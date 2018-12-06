@@ -1,7 +1,8 @@
 const getState = scope => {
 	return {
 		store: {
-			auth_token: "key",
+			auth: "key",
+			userInfo: {},
 			username: "username",
 			password: "password",
 			cryptoValues: []
@@ -24,7 +25,8 @@ const getState = scope => {
 					.then(res => res.json())
 					.then(data => {
 						var store = scope.state.store;
-						store.auth_token = data.token;
+						store.auth = data.token;
+						store.userInfo = data;
 						scope.setState({
 							store
 						});

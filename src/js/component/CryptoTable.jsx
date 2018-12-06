@@ -1,5 +1,6 @@
 import React from "react";
 import { Table, TableBody, TableHead } from "mdbreact";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const CryptoTable = props => {
@@ -12,7 +13,11 @@ const CryptoTable = props => {
 		if (props.values.length != 0) {
 			return (
 				<tr key={index}>
-					<td>{coin.meta_keys.FROMSYMBOL}</td>
+					<td>
+						<Link to={"/single/" + index}>
+							<span>{coin.meta_keys.FROMSYMBOL}</span>
+						</Link>
+					</td>
 					<td>${price}</td>
 					<td>${highDay}</td>
 					<td>${lowDay}</td>
