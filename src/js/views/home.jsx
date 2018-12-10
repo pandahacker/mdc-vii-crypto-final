@@ -20,9 +20,7 @@ export class Home extends React.Component {
 							</p>
 							<Container>
 								<Table>
-									<TableHead
-										color="elegant-color-dark"
-										textWhite>
+									<TableHead color="elegant-color-dark" textWhite>
 										<tr>
 											<th>Symbol</th>
 											<th>Price</th>
@@ -31,9 +29,7 @@ export class Home extends React.Component {
 										</tr>
 									</TableHead>
 									<TableBody>
-										<CryptoTable
-											values={store.cryptoValues}
-										/>
+										<CryptoTable values={store.cryptoValues} />
 									</TableBody>
 								</Table>
 							</Container>

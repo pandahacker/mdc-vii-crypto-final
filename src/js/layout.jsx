@@ -7,6 +7,8 @@ import { Demo } from "./views/demo.jsx";
 import { AboutUs } from "./views/aboutus.jsx";
 import { Contact } from "./views/contact.jsx";
 import { Register } from "./views/register.jsx";
+import { Dashboard } from "./views/dashboard.jsx";
+import { ForgotPassword } from "./views/forgotPassword.jsx";
 import { Pricing } from "./views/pricing.jsx";
 import { Single } from "./views/single.jsx";
 import Store from "./store/appContext.jsx";
@@ -23,13 +25,15 @@ export class Layout extends React.Component {
 				<ScrollToTop>
 					<NavbarPage />
 					<Switch>
+						<Route path="/forgotpassword" component={ForgotPassword} />
 						<Route exact path="/" component={Home} />
-						<Route path="/demo" component={Demo} />
-						<Route path="/aboutus" component={AboutUs} />
-						<Route path="/contact" component={Contact} />
-						<Route path="/register" component={Register} />
-						<Route path="/pricing" component={Pricing} />
-						<Route path="/single/:theid" component={Single} />
+						<Route exact path="/demo" component={Demo} />
+						<Route exact path="/aboutus" component={AboutUs} />
+						<Route exact path="/contact" component={Contact} />
+						<Route exact path="/register" component={Register} />
+						<Route exact path="/dashboard" component={Dashboard} />
+						<Route exact path="/pricing" component={Pricing} />
+						<Route exact path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footerpage />

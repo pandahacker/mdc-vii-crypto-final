@@ -1,15 +1,5 @@
 import React from "react";
-import {
-	Container,
-	Row,
-	Button,
-	Card,
-	CardBody,
-	CardImage,
-	CardTitle,
-	CardText,
-	Col
-} from "mdbreact";
+import { Container, Row, Button, Card, CardBody, CardImage, CardTitle, CardText, Col } from "mdbreact";
 import { PaypalButton } from "../component/PaypalButton.jsx";
 
 export class Pricing extends React.Component {
@@ -29,16 +19,10 @@ export class Pricing extends React.Component {
 								<CardText className="mt-3">
 									<ul>
 										<li>Access to pricing info</li>
-										<li>
-											Personalized dashboard with
-											favorites
-										</li>
+										<li>Personalized dashboard with favorites</li>
 										<li>View limited historical data</li>
 									</ul>
-									<Button
-										color="primary"
-										className="float-right mt-2"
-										href="#">
+									<Button color="primary" className="float-right mt-2" href="#">
 										Register
 									</Button>
 								</CardText>
@@ -57,10 +41,7 @@ export class Pricing extends React.Component {
 								<CardText className="mt-3">
 									<ul>
 										<li>Access to live pricing info</li>
-										<li>
-											Personalized dashboard with
-											favorites
-										</li>
+										<li>Personalized dashboard with favorites</li>
 										<li>View full historical data</li>
 									</ul>
 									<div className="float-right mt-2">

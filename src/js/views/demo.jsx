@@ -14,26 +14,12 @@ export class Demo extends React.Component {
 						{({ store, actions }) => {
 							return store.demo.map((item, index) => {
 								return (
-									<li
-										key={index}
-										className="list-group-item d-flex justify-content-between"
-										style={{ background: item.background }}>
+									<li key={index} className="list-group-item d-flex justify-content-between" style={{ background: item.background }}>
 										<Link to={"/single/" + index}>
 											<span>Link to: {item.title}</span>
 										</Link>
-										<p style={{ color: item.initial }}>
-											{
-												"Check store/store.js scroll to the actions to see the code "
-											}
-										</p>
-										<button
-											className="btn btn-success"
-											onClick={() =>
-												actions.changeColor(
-													index,
-													"orange"
-												)
-											}>
+										<p style={{ color: item.initial }}>{"Check store/store.js scroll to the actions to see the code "}</p>
+										<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
 											Change Color
 										</button>
 									</li>

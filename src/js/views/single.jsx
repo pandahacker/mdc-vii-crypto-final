@@ -9,26 +9,14 @@ export class Single extends React.Component {
 			<div className="jumbotron">
 				<Context.Consumer>
 					{({ store }) => {
-						return (
-							<h1 className="display-4">
-								This will show the demo element:{" "}
-								{
-									store.cryptoValues[
-										this.props.match.params.theid
-									].meta_keys.FROMSYMBOL
-								}
-							</h1>
-						);
+						return <h1 className="display-4">This will show the demo element: {store.cryptoValues[this.props.match.params.theid].meta_keys.FROMSYMBOL}</h1>;
 					}}
 				</Context.Consumer>
 
 				<hr className="my-4" />
 
 				<Link to="/">
-					<span
-						className="btn btn-primary btn-lg"
-						href="#"
-						role="button">
+					<span className="btn btn-primary btn-lg" href="#" role="button">
 						Back home
 					</span>
 				</Link>

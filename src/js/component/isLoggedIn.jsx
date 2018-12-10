@@ -14,7 +14,7 @@ export default class IsLoggedIn extends React.Component {
 		} else if (auth != "key") {
 			return (
 				<NavItem>
-					<NavLink className="my-0 pt-2" to="/aboutus">
+					<NavLink className="my-0 pt-2" to="/dashboard">
 						Welcome {userInfo.user_display_name}!
 					</NavLink>
 				</NavItem>

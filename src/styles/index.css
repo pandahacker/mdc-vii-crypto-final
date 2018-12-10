@@ -1,8 +1,4 @@
 /*
     General Styles
 */
-
-.nav-item a{
-    margin:0 10px;
-    color: white;
-}
+html, body { height: 100% }

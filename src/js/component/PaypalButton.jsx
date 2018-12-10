@@ -28,8 +28,7 @@ export class PaypalButton extends React.Component {
 		// Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
 
 		const client = {
-			sandbox:
-				"AfovkgOJ9nDHSNloqkrzKEniWueDWumU0p3FeZqMJcQIk3Uf55P9LoHPbZ8bHRiFgkftBZE-c5jdRsnI",
+			sandbox: "AfovkgOJ9nDHSNloqkrzKEniWueDWumU0p3FeZqMJcQIk3Uf55P9LoHPbZ8bHRiFgkftBZE-c5jdRsnI",
 			production: "YOUR-PRODUCTION-APP-ID"
 		};
 		// In order to get production's app-ID, you will have to send your app to Paypal for approval first
@@ -40,16 +39,6 @@ export class PaypalButton extends React.Component {
 		//   => https://developer.paypal.com/docs/classic/lifecycle/goingLive/
 
 		// NB. You can also have many Paypal express checkout buttons on page, just pass in the correct amount and they will work!
-		return (
-			<PaypalExpressBtn
-				env={env}
-				client={client}
-				currency={currency}
-				total={total}
-				onError={onError}
-				onSuccess={onSuccess}
-				onCancel={onCancel}
-			/>
-		);
+		return <PaypalExpressBtn env={env} client={client} currency={currency} total={total} onError={onError} onSuccess={onSuccess} onCancel={onCancel} />;
 	}
 }
