@@ -1,20 +1,21 @@
 import React from "react";
+import { Container, Input, Button, Modal, ModalBody, ModalHeader, ModalFooter, MDBAlert, MDBContainer } from "mdbreact";
 import { Context } from "../store/appContext.jsx";
-import { Link } from "react-router-dom";
-import { Container, Button, Modal, ModalBody, ModalHeader, ModalFooter, InputFile, Input } from "mdbreact";
 
-export default class ModalPage extends React.Component {
+export class Register extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			modal: false,
 			username: "",
+			email: "",
 			password: ""
 		};
 
-		this.toggle = this.toggle.bind(this);
 		this.getUserName = this.getUserName.bind(this);
 		this.getPassword = this.getPassword.bind(this);
+		this.getEmail = this.getEmail.bind(this);
+		this.toggle = this.toggle.bind(this);
 	}
 
 	toggle = () => {
@@ -28,6 +29,11 @@ export default class ModalPage extends React.Component {
 			username: event.target.value
 		});
 	};
+	getEmail = event => {
+		this.setState({
+			email: event.target.value
+		});
+	};
 	getPassword = event => {
 		this.setState({
 			password: event.target.value
@@ -39,33 +45,28 @@ export default class ModalPage extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<Container className="ml-0 pl-0">
+						<Container className="pr-1">
 							{/* BUTTON */}
-							<Button color="primary" onClick={this.toggle}>
-								Login
+							<Button color="info" onClick={this.toggle}>
+								Register
 							</Button>
 							{/* MODAL */}
 							<Modal isOpen={this.state.modal} toggle={this.toggle} centered>
 								<ModalHeader toggle={this.toggle}>Login</ModalHeader>
 								<ModalBody>
 									<Input type="text" label="Username" value={this.state.username} onChange={this.getUserName} />
+									<Input type="text" label="Email" value={this.state.email} onChange={this.getEmail} />
 									<Input type="password" label="Password" value={this.state.password} onChange={this.getPassword} />
-									<Link to="/forgotpassword" onChange={this.toggle}>
-										Forgot your password?
-									</Link>
 								</ModalBody>
 								<ModalFooter>
-									<Button color="secondary" onClick={this.toggle}>
-										Close
-									</Button>
 									<Button
 										color="primary"
 										onClick={event => {
 											event.preventDefault();
-											actions.login(this.state.username, this.state.password);
+											actions.createUser(this.state.username, this.state.email, this.state.password);
 											this.toggle();
 										}}>
-										Login
+										Register
 									</Button>
 								</ModalFooter>
 							</Modal>

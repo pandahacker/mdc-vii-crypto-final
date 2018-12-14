@@ -7,7 +7,7 @@ export class Pricing extends React.Component {
 		return (
 			<Container>
 				<Row>
-					<Col size="6">
+					<Col sm="12" lg="6">
 						<Card className="my-5">
 							<CardBody>
 								<CardTitle className="">Free Tier</CardTitle>
@@ -29,7 +29,7 @@ export class Pricing extends React.Component {
 							</CardBody>
 						</Card>
 					</Col>
-					<Col size="6">
+					<Col sm="12" lg="6">
 						<Card className="my-5">
 							<CardBody>
 								<CardTitle>Trader Tier</CardTitle>
@@ -44,7 +44,7 @@ export class Pricing extends React.Component {
 										<li>Personalized dashboard with favorites</li>
 										<li>View full historical data</li>
 									</ul>
-									<div className="float-right mt-2">
+									<div className="float-right mt-2 pt-3">
 										<PaypalButton />
 									</div>
 								</CardText>

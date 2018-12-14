@@ -6,7 +6,6 @@ import { Home } from "./views/home.jsx";
 import { Demo } from "./views/demo.jsx";
 import { AboutUs } from "./views/aboutus.jsx";
 import { Contact } from "./views/contact.jsx";
-import { Register } from "./views/register.jsx";
 import { Dashboard } from "./views/dashboard.jsx";
 import { ForgotPassword } from "./views/forgotPassword.jsx";
 import { Pricing } from "./views/pricing.jsx";
@@ -30,7 +29,6 @@ export class Layout extends React.Component {
 						<Route exact path="/demo" component={Demo} />
 						<Route exact path="/aboutus" component={AboutUs} />
 						<Route exact path="/contact" component={Contact} />
-						<Route exact path="/register" component={Register} />
 						<Route exact path="/dashboard" component={Dashboard} />
 						<Route exact path="/pricing" component={Pricing} />
 						<Route exact path="/single/:theid" component={Single} />

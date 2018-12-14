@@ -27,7 +27,7 @@ export class NavbarPage extends React.Component {
 							<NavbarBrand>
 								<NavLink to="/">
 									<span className="fas fa-coins d-inline-block text-white" />
-									<strong className="white-text ml-2">Crypto-Placeholder</strong>
+									<strong className="white-text ml-4">IEOF</strong>
 								</NavLink>
 							</NavbarBrand>
 							<NavbarToggler onClick={this.toggleCollapse} />
@@ -42,9 +42,6 @@ export class NavbarPage extends React.Component {
 									<NavItem>
 										<NavLink to="/contact">Contact</NavLink>
 									</NavItem>
-									<NavItem>
-										<NavLink to="/register">Register</NavLink>
-									</NavItem>
 								</NavbarNav>
 								<NavbarNav right>
 									<NavItem>
@@ -54,9 +51,7 @@ export class NavbarPage extends React.Component {
 											</div>
 										</FormInline>
 									</NavItem>
-									<NavItem>
-										<IsLoggedIn auth={store.auth} userInfo={store.userInfo} />
-									</NavItem>
+									<IsLoggedIn auth={store.auth} userInfo={store.userInfo} />
 								</NavbarNav>
 							</Collapse>
 						</Navbar>

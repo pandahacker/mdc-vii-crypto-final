@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Input, Button, Fa } from "mdbreact";
+import { Container, Row, Col, Input, Button, Fa, MDBAlert } from "mdbreact";
 import { Context } from "../store/appContext.jsx";
 
 export class Register extends React.Component {

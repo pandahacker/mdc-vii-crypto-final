@@ -5,7 +5,8 @@ const getState = scope => {
 			userInfo: {},
 			username: "username",
 			password: "password",
-			cryptoValues: []
+			cryptoValues: [],
+			cryptoHistory: []
 		},
 		actions: {
 			login: (userName, passWord) => {

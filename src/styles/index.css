@@ -2,3 +2,27 @@
     General Styles
 */
 html, body { height: 100% }
+
+.rowC{display:flex; flex-direction:row;}
+
+.dataTables_filter{
+    float:right;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+.dataTables_length{
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.dataTables_info{
+    padding-left: 15px;
+}
+.dataTables_paginate{
+    float:right;
+    padding-right: 15px;
+}
+.construction{
+    padding-top: 400px;
+    padding-bottom: 400px;
+}

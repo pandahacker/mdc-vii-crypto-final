@@ -57,16 +57,20 @@
 		"events": "^1.1.1",
 		"jquery": "^3.3.1",
 		"mdbreact": "^4.8.3",
+		"moment": "^2.22.2",
 		"popper.js": "^1.12.9",
 		"prop-types": "^15.6.1",
 		"query-string": "^5.1.1",
 		"react": "^16.6.0",
 		"react-dom": "^16.6.0",
+		"react-moment": "^0.8.4",
 		"react-onclickoutside": "^6.7.1",
 		"react-paypal-express-checkout": "^1.0.5",
 		"react-polyfills": "0.0.1",
 		"react-router": "^4.3.1",
 		"react-router-dom": "^4.3.1",
-		"reactstrap": "^6.5.0"
+		"reactstrap": "^6.5.0",
+		"recharts": "^1.4.1",
+		"victory": "^31.0.1"
 	}
 }

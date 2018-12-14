@@ -14,10 +14,7 @@ export class Home extends React.Component {
 				{({ store, actions }) => {
 					return (
 						<div className="text-center mt-5">
-							<h1>{store.auth_token}</h1>
-							<p>
-								<img src={rigoImage} />
-							</p>
+							<h1 className="pb-4"> Is Everything on Fire? </h1>
 							<Container>
 								<Table>
 									<TableHead color="elegant-color-dark" textWhite>
